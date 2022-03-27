@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.App {
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1200px;
+  .main-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    .all-part-list {
+      max-height: 80vh;
+      overflow-y: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .all-part-list::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 1150px) {
+        .all-part-list{
+            max-width: 1000px;
+        }
+    }
+    @media (max-width: 415px) {
+        .all-part-list {
+          max-height: 40vh;
+        }
+      }
+  }
+}
+
+@media (max-width: 1150px) {
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+body {
+  background-image: url("https://wallpapersmug.com/large/e6ae39/triangles-geometric-pattern.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100%;
+}
+html {
+    height: 100%;
+}
